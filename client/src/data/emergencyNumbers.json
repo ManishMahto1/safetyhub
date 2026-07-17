@@ -1,0 +1,172 @@
+{
+  "default": {
+    "country": "International",
+    "numbers": [
+      {
+        "label": "Emergency",
+        "number": "112",
+        "type": "general"
+      }
+    ]
+  },
+  "US": {
+    "country": "United States",
+    "numbers": [
+      {
+        "label": "Police / Fire / Medical",
+        "number": "911",
+        "type": "general"
+      },
+      {
+        "label": "Poison Control",
+        "number": "18002221222",
+        "type": "medical"
+      },
+      {
+        "label": "Suicide & Crisis Lifeline",
+        "number": "988",
+        "type": "mental-health"
+      }
+    ]
+  },
+  "IN": {
+    "country": "India",
+    "numbers": [
+      {
+        "label": "All-in-one Emergency",
+        "number": "112",
+        "type": "general"
+      },
+      {
+        "label": "Police",
+        "number": "100",
+        "type": "police"
+      },
+      {
+        "label": "Ambulance",
+        "number": "102",
+        "type": "medical"
+      },
+      {
+        "label": "Fire",
+        "number": "101",
+        "type": "fire"
+      },
+      {
+        "label": "Women's Helpline",
+        "number": "1091",
+        "type": "safety"
+      }
+    ]
+  },
+  "GB": {
+    "country": "United Kingdom",
+    "numbers": [
+      {
+        "label": "Police / Fire / Medical (Emergency)",
+        "number": "999",
+        "type": "general"
+      },
+      {
+        "label": "Non-emergency Police",
+        "number": "101",
+        "type": "police"
+      },
+      {
+        "label": "Non-emergency Medical (NHS)",
+        "number": "111",
+        "type": "medical"
+      }
+    ]
+  },
+  "CA": {
+    "country": "Canada",
+    "numbers": [
+      {
+        "label": "Police / Fire / Medical",
+        "number": "911",
+        "type": "general"
+      }
+    ]
+  },
+  "AU": {
+    "country": "Australia",
+    "numbers": [
+      {
+        "label": "Police / Fire / Medical",
+        "number": "000",
+        "type": "general"
+      },
+      {
+        "label": "Non-urgent Police",
+        "number": "131444",
+        "type": "police"
+      }
+    ]
+  },
+  "EU": {
+    "country": "European Union (general)",
+    "numbers": [
+      {
+        "label": "Emergency",
+        "number": "112",
+        "type": "general"
+      }
+    ]
+  },
+  "JP": {
+    "country": "Japan",
+    "numbers": [
+      {
+        "label": "Police",
+        "number": "110",
+        "type": "police"
+      },
+      {
+        "label": "Ambulance / Fire",
+        "number": "119",
+        "type": "medical"
+      }
+    ]
+  },
+  "ZA": {
+    "country": "South Africa",
+    "numbers": [
+      {
+        "label": "Police",
+        "number": "10111",
+        "type": "police"
+      },
+      {
+        "label": "Ambulance",
+        "number": "10177",
+        "type": "medical"
+      },
+      {
+        "label": "Emergency (mobile)",
+        "number": "112",
+        "type": "general"
+      }
+    ]
+  },
+  "BR": {
+    "country": "Brazil",
+    "numbers": [
+      {
+        "label": "Police",
+        "number": "190",
+        "type": "police"
+      },
+      {
+        "label": "Ambulance (SAMU)",
+        "number": "192",
+        "type": "medical"
+      },
+      {
+        "label": "Fire",
+        "number": "193",
+        "type": "fire"
+      }
+    ]
+  }
+}

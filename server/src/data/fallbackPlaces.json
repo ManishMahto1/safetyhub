@@ -1,0 +1,59 @@
+[
+  {
+    "id": "fallback-hospital-1",
+    "name": "City General Hospital",
+    "category": "hospital",
+    "lat": 22.7196,
+    "lng": 75.8577,
+    "photoUrl": null,
+    "address": "MG Road",
+    "phone": "+911234500001"
+  },
+  {
+    "id": "fallback-pharmacy-1",
+    "name": "Care Pharmacy",
+    "category": "pharmacy",
+    "lat": 22.7205,
+    "lng": 75.8600,
+    "photoUrl": null,
+    "address": "Station Road"
+  },
+  {
+    "id": "fallback-police-1",
+    "name": "Central Police Station",
+    "category": "police",
+    "lat": 22.7180,
+    "lng": 75.8550,
+    "photoUrl": null,
+    "address": "Civil Lines",
+    "phone": "+911234500002"
+  },
+  {
+    "id": "fallback-bank-1",
+    "name": "National Bank ATM",
+    "category": "bank",
+    "lat": 22.7215,
+    "lng": 75.8590,
+    "photoUrl": null,
+    "address": "Market Square"
+  },
+  {
+    "id": "fallback-fuel-1",
+    "name": "Highway Fuel Station",
+    "category": "fuel",
+    "lat": 22.7160,
+    "lng": 75.8620,
+    "photoUrl": null,
+    "address": "Ring Road"
+  },
+  {
+    "id": "fallback-fire-1",
+    "name": "Municipal Fire Station",
+    "category": "fire-station",
+    "lat": 22.7230,
+    "lng": 75.8560,
+    "photoUrl": null,
+    "address": "Fire Brigade Lane",
+    "phone": "+911234500003"
+  }
+]

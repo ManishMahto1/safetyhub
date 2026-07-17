@@ -123,8 +123,6 @@ cd server && npm run build && npm start
 
 ---
 
----
-
 ## Contributing
 
 SafetyHub is open-source and community-improvable by design — the emergency numbers dataset in particular depends on contributors from different countries keeping it accurate.
@@ -155,4 +153,3 @@ MIT — see [`LICENSE`](LICENSE).
 ## Team
 
 Built by a team of 3 for the OpenAI Codex Hackathon, July 2026.
-
