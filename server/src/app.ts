@@ -8,6 +8,9 @@ import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 export function createApp(): Express {
   const app = express();
 
+  // Render (and most PaaS) sit behind a proxy — trust the first hop
+  app.set('trust proxy', 1);
+
   app.use(cors({ origin: env.clientOrigin }));
   app.use(express.json({ limit: '100kb' }));
 
