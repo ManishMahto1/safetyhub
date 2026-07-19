@@ -2,6 +2,7 @@ import express, { Express } from 'express';
 import cors from 'cors';
 import { env } from './config/env';
 import placesRoute from './routes/places.route';
+import geocodeRoute from './routes/geocode.route';
 import voiceAssistRoute from './routes/voiceAssist.route';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 
@@ -16,6 +17,7 @@ export function createApp(): Express {
   });
 
   app.use('/api/places', placesRoute);
+  app.use('/api/geocode', geocodeRoute);
   app.use('/api/voice-assist', voiceAssistRoute);
 
   app.use(notFoundHandler);

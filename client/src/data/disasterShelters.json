@@ -1,0 +1,66 @@
+[
+  {
+    "id": "shelter-1",
+    "name": "Nehru Stadium Relief Shelter",
+    "type": "shelter",
+    "lat": 22.725,
+    "lng": 75.872,
+    "phone": "+911234511001",
+    "address": "Nehru Stadium Road",
+    "capacity": "500 people"
+  },
+  {
+    "id": "relief-1",
+    "name": "District Relief Coordination Center",
+    "type": "relief",
+    "lat": 22.7185,
+    "lng": 75.8555,
+    "phone": "+911234511002",
+    "address": "Collectorate Campus"
+  },
+  {
+    "id": "medical-1",
+    "name": "Red Cross Medical Camp",
+    "type": "medical",
+    "lat": 22.722,
+    "lng": 75.861,
+    "phone": "+911234511003",
+    "address": "MG Road"
+  },
+  {
+    "id": "food-1",
+    "name": "Community Kitchen & Water Point",
+    "type": "food",
+    "lat": 22.716,
+    "lng": 75.864,
+    "phone": "+911234511004",
+    "address": "Rajwada Square"
+  },
+  {
+    "id": "shelter-2",
+    "name": "Municipal School Shelter",
+    "type": "shelter",
+    "lat": 22.73,
+    "lng": 75.858,
+    "phone": "+911234511005",
+    "address": "Sector 5"
+  },
+  {
+    "id": "relief-2",
+    "name": "NGO Relief Distribution Hub",
+    "type": "relief",
+    "lat": 22.712,
+    "lng": 75.87,
+    "phone": "+911234511006",
+    "address": "Ring Road"
+  },
+  {
+    "id": "medical-2",
+    "name": "Mobile Ambulance Post",
+    "type": "medical",
+    "lat": 22.7275,
+    "lng": 75.866,
+    "phone": "+911234511007",
+    "address": "Palasia Square"
+  }
+]

@@ -1,0 +1,164 @@
+{
+  "app": {
+    "name": "SafetyHub",
+    "tagline": "Trouvez ce qu'il vous faut, tout de suite, ici même."
+  },
+  "nav": {
+    "home": "Accueil",
+    "map": "Carte",
+    "contacts": "Contacts",
+    "settings": "Réglages"
+  },
+  "offline": {
+    "banner": "Hors ligne — les numéros d'urgence et les contacts enregistrés fonctionnent toujours"
+  },
+  "categories": {
+    "all": "Tous",
+    "hospital": "Hôpitaux",
+    "pharmacy": "Pharmacies",
+    "police": "Police",
+    "bank": "Banques",
+    "fuel": "Carburant",
+    "fire-station": "Pompiers"
+  },
+  "categoryName": {
+    "hospital": "Hôpital",
+    "pharmacy": "Pharmacie",
+    "police": "Police",
+    "bank": "Banque",
+    "fuel": "Station-service",
+    "fire-station": "Caserne de pompiers"
+  },
+  "home": {
+    "sosHeading": "Envoyer un SOS",
+    "emergencyNumbers": "Numéros d'urgence",
+    "voiceAssistant": "Assistant vocal"
+  },
+  "sos": {
+    "button": "SOS",
+    "aria": "Envoyer un SOS à vos contacts d'urgence",
+    "noContactsHint": "Ajoutez un contact d'urgence dans Contacts pour que le SOS ait où envoyer votre position.",
+    "sendingA11y": "Envoi du SOS",
+    "countdown": "Envoi de votre position à {{count}} contact(s) dans",
+    "cancel": "Annuler",
+    "noContactsTitle": "Aucun contact enregistré",
+    "noLocationTitle": "Impossible d'obtenir votre position",
+    "readyTitle": "Prêt à envoyer",
+    "noContactsBody": "Ajoutez d'abord un contact d'urgence pour que le SOS ait où envoyer votre position.",
+    "noLocationBody": "Vérifiez les autorisations de localisation et réessayez.",
+    "readyBody": "Appuyez pour envoyer votre position à chaque contact. Nous avons tenté d'ouvrir le premier automatiquement.",
+    "textContacts": "Envoyer un SMS à {{names}}",
+    "whatsappContact": "WhatsApp à {{name}}",
+    "done": "Terminé"
+  },
+  "contacts": {
+    "title": "Contacts d'urgence",
+    "subtitle": "Le SOS envoie votre position en direct à ces personnes. {{count}}/{{max}} enregistrés.",
+    "edit": "Modifier",
+    "remove": "Supprimer",
+    "empty": "Aucun contact pour l'instant. Ajoutez quelqu'un qui devrait savoir si vous êtes en difficulté.",
+    "addTitle": "Ajouter un contact",
+    "editTitle": "Modifier le contact",
+    "name": "Nom",
+    "namePlaceholder": "p. ex. Maman",
+    "phone": "Numéro de téléphone",
+    "phonePlaceholder": "+33 6 12 34 56 78",
+    "sendVia": "Envoyer le SOS via",
+    "channelSms": "SMS",
+    "channelWhatsapp": "WhatsApp",
+    "errRequired": "Le nom et le numéro de téléphone sont obligatoires.",
+    "errPhone": "Saisissez un numéro de téléphone valide.",
+    "errLimit": "Vous pouvez enregistrer jusqu'à {{max}} contacts.",
+    "errDuplicate": "Ce numéro de téléphone est déjà enregistré.",
+    "save": "Enregistrer le contact",
+    "saveChanges": "Enregistrer les modifications",
+    "cancel": "Annuler",
+    "limitReached": "Vous avez atteint la limite de {{max}} contacts. Supprimez-en un pour en ajouter un autre.",
+    "ariaEdit": "Modifier {{name}}",
+    "ariaRemove": "Supprimer {{name}}"
+  },
+  "map": {
+    "searchPlaceholder": "Rechercher une ville ou un lieu…",
+    "searchAria": "Rechercher une ville ou un lieu",
+    "viewMap": "Carte",
+    "viewList": "Liste",
+    "viewToggleAria": "Vue carte ou liste",
+    "filterAria": "Filtrer les lieux par catégorie",
+    "locationOff": "La localisation est désactivée. Recherchez une ville ci-dessus pour voir l'aide à proximité.",
+    "locating": "Recherche de votre position…",
+    "loading": "Recherche de lieux à proximité…",
+    "offlineCached": "Hors ligne — affichage de vos derniers lieux chargés",
+    "sampleData": "Affichage de données d'exemple — résultats en direct indisponibles",
+    "loadError": "Impossible de charger les lieux — aucune donnée en cache pour l'instant",
+    "emptyList": "Aucun lieu trouvé ici pour l'instant. Essayez une autre catégorie ou une autre zone.",
+    "call": "Appeler",
+    "directions": "Itinéraire",
+    "away": "à {{distance}}",
+    "closeDetails": "Fermer les détails",
+    "showOnMapAria": "Afficher {{name}} sur la carte",
+    "callAria": "Appeler {{name}}",
+    "directionsAria": "Itinéraire vers {{name}}"
+  },
+  "settings": {
+    "title": "Réglages",
+    "language": "Langue",
+    "languageHelp": "Choisissez la langue de l'application et de l'assistant vocal.",
+    "languageAuto": "Détection automatique",
+    "region": "Région",
+    "regionHelp": "SafetyHub détecte automatiquement votre pays d'après votre position. Modifiez-le ici si la détection se trompe.",
+    "regionAuto": "Détection automatique",
+    "connection": "Connexion",
+    "status": "État :",
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "connectionHelp": "Les numéros d'urgence et les contacts enregistrés fonctionnent toujours hors ligne. La carte et l'assistant vocal nécessitent une connexion.",
+    "about": "À propos",
+    "aboutText": "SafetyHub est open source sous licence MIT. Créé pour le OpenAI Codex Hackathon, juillet 2026."
+  },
+  "voice": {
+    "statusListening": "Écoute…",
+    "statusThinking": "Réflexion…",
+    "statusSpeaking": "Conseils en cours…",
+    "statusSpeakingDone": "Voici quoi faire",
+    "statusIdle": "Appuyez sur le micro et décrivez ce qui se passe",
+    "statusError": "Impossible d'obtenir des conseils",
+    "disclaimer": "Conseils uniquement — le SOS n'est jamais déclenché automatiquement.",
+    "unsupported": "La saisie vocale n'est pas prise en charge par ce navigateur. Essayez Chrome ou Safari, ou utilisez directement la carte et les numéros d'urgence.",
+    "micStart": "Parlez à l'assistant vocal",
+    "micStop": "Arrêter l'écoute",
+    "errDenied": "L'accès au microphone est bloqué. Autorisez-le dans les paramètres du site de votre navigateur, puis réessayez.",
+    "errNoMic": "Aucun microphone trouvé sur cet appareil.",
+    "errNoSpeech": "Je n'ai pas compris. Appuyez sur le micro et réessayez.",
+    "errNetwork": "La reconnaissance vocale nécessite une connexion pour le moment.",
+    "youSaid": "Vous avez dit :",
+    "showOnMap": "Afficher {{category}} sur la carte"
+  },
+  "imSafe": {
+    "button": "Je suis en sécurité",
+    "sheetTitle": "Prévenez-les que vous êtes en sécurité",
+    "sheetBody": "Envoyez un message de suivi à vos contacts pour qu'ils sachent que vous allez bien."
+  },
+  "qr": {
+    "button": "Partager ma position (QR)",
+    "title": "Scannez pour voir ma position",
+    "generating": "Génération du code QR…",
+    "noLocation": "Position indisponible. Activez la localisation et réessayez.",
+    "share": "Partager le lien",
+    "shareText": "Voici ma position en direct",
+    "close": "Fermer"
+  },
+  "disaster": {
+    "settingsTitle": "Mode catastrophe",
+    "settingsHelp": "Démo : affiche les abris et centres de secours à proximité comme si une catastrophe était déclarée dans votre région. Fonctionne hors ligne.",
+    "banner": "Mode catastrophe — les abris et centres de secours à proximité sont affichés",
+    "sheltersTitle": "Abris et centres de secours",
+    "sheltersSubtitle": "Lieux sûrs sélectionnés pour l'abri, l'aide médicale, la nourriture et l'eau.",
+    "empty": "Aucun abri répertorié pour cette zone."
+  },
+  "disasterType": {
+    "shelter": "Abri",
+    "relief": "Centre de secours",
+    "medical": "Camp médical",
+    "food": "Nourriture et eau"
+  }
+}

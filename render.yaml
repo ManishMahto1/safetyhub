@@ -1,0 +1,24 @@
+# Render Blueprint for the SafetyHub API (server/).
+# Deploy: create a new Blueprint on Render pointing at this repo, then set the
+# secret env vars (MONGO_URI, OPENAI_API_KEY, CLIENT_ORIGIN) in the dashboard.
+# Render injects PORT automatically; the server reads it via process.env.PORT.
+services:
+  - type: web
+    name: safetyhub-server
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: '20'
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false # optional — app runs without it (voice logging only)
+      - key: OPENAI_API_KEY
+        sync: false # optional — falls back to keyword guidance if unset
+      - key: CLIENT_ORIGIN
+        sync: false # set to the deployed client URL (for CORS)

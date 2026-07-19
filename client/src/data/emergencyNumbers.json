@@ -2,171 +2,322 @@
   "default": {
     "country": "International",
     "numbers": [
-      {
-        "label": "Emergency",
-        "number": "112",
-        "type": "general"
-      }
+      { "label": "Emergency (GSM standard)", "number": "112", "type": "general" }
     ]
   },
   "US": {
     "country": "United States",
     "numbers": [
-      {
-        "label": "Police / Fire / Medical",
-        "number": "911",
-        "type": "general"
-      },
-      {
-        "label": "Poison Control",
-        "number": "18002221222",
-        "type": "medical"
-      },
-      {
-        "label": "Suicide & Crisis Lifeline",
-        "number": "988",
-        "type": "mental-health"
-      }
-    ]
-  },
-  "IN": {
-    "country": "India",
-    "numbers": [
-      {
-        "label": "All-in-one Emergency",
-        "number": "112",
-        "type": "general"
-      },
-      {
-        "label": "Police",
-        "number": "100",
-        "type": "police"
-      },
-      {
-        "label": "Ambulance",
-        "number": "102",
-        "type": "medical"
-      },
-      {
-        "label": "Fire",
-        "number": "101",
-        "type": "fire"
-      },
-      {
-        "label": "Women's Helpline",
-        "number": "1091",
-        "type": "safety"
-      }
-    ]
-  },
-  "GB": {
-    "country": "United Kingdom",
-    "numbers": [
-      {
-        "label": "Police / Fire / Medical (Emergency)",
-        "number": "999",
-        "type": "general"
-      },
-      {
-        "label": "Non-emergency Police",
-        "number": "101",
-        "type": "police"
-      },
-      {
-        "label": "Non-emergency Medical (NHS)",
-        "number": "111",
-        "type": "medical"
-      }
+      { "label": "Police / Fire / Medical", "number": "911", "type": "general" },
+      { "label": "Suicide & Crisis Lifeline", "number": "988", "type": "mental-health" },
+      { "label": "Poison Control", "number": "18002221222", "type": "medical" }
     ]
   },
   "CA": {
     "country": "Canada",
     "numbers": [
-      {
-        "label": "Police / Fire / Medical",
-        "number": "911",
-        "type": "general"
-      }
+      { "label": "Police / Fire / Medical", "number": "911", "type": "general" },
+      { "label": "Suicide Crisis Helpline", "number": "988", "type": "mental-health" }
     ]
   },
-  "AU": {
-    "country": "Australia",
+  "MX": {
+    "country": "Mexico",
     "numbers": [
-      {
-        "label": "Police / Fire / Medical",
-        "number": "000",
-        "type": "general"
-      },
-      {
-        "label": "Non-urgent Police",
-        "number": "131444",
-        "type": "police"
-      }
-    ]
-  },
-  "EU": {
-    "country": "European Union (general)",
-    "numbers": [
-      {
-        "label": "Emergency",
-        "number": "112",
-        "type": "general"
-      }
-    ]
-  },
-  "JP": {
-    "country": "Japan",
-    "numbers": [
-      {
-        "label": "Police",
-        "number": "110",
-        "type": "police"
-      },
-      {
-        "label": "Ambulance / Fire",
-        "number": "119",
-        "type": "medical"
-      }
-    ]
-  },
-  "ZA": {
-    "country": "South Africa",
-    "numbers": [
-      {
-        "label": "Police",
-        "number": "10111",
-        "type": "police"
-      },
-      {
-        "label": "Ambulance",
-        "number": "10177",
-        "type": "medical"
-      },
-      {
-        "label": "Emergency (mobile)",
-        "number": "112",
-        "type": "general"
-      }
+      { "label": "Emergency (Police / Fire / Medical)", "number": "911", "type": "general" }
     ]
   },
   "BR": {
     "country": "Brazil",
     "numbers": [
-      {
-        "label": "Police",
-        "number": "190",
-        "type": "police"
-      },
-      {
-        "label": "Ambulance (SAMU)",
-        "number": "192",
-        "type": "medical"
-      },
-      {
-        "label": "Fire",
-        "number": "193",
-        "type": "fire"
-      }
+      { "label": "Police", "number": "190", "type": "police" },
+      { "label": "Ambulance (SAMU)", "number": "192", "type": "medical" },
+      { "label": "Fire", "number": "193", "type": "fire" },
+      { "label": "Civil Defence", "number": "199", "type": "disaster" }
+    ]
+  },
+  "AR": {
+    "country": "Argentina",
+    "numbers": [
+      { "label": "Emergency", "number": "911", "type": "general" },
+      { "label": "Police", "number": "101", "type": "police" },
+      { "label": "Ambulance (SAME)", "number": "107", "type": "medical" },
+      { "label": "Fire", "number": "100", "type": "fire" }
+    ]
+  },
+  "GB": {
+    "country": "United Kingdom",
+    "numbers": [
+      { "label": "Police / Fire / Medical (Emergency)", "number": "999", "type": "general" },
+      { "label": "Non-emergency Police", "number": "101", "type": "police" },
+      { "label": "Non-emergency Medical (NHS)", "number": "111", "type": "medical" }
+    ]
+  },
+  "IE": {
+    "country": "Ireland",
+    "numbers": [
+      { "label": "Emergency", "number": "112", "type": "general" },
+      { "label": "Emergency (alt)", "number": "999", "type": "general" }
+    ]
+  },
+  "FR": {
+    "country": "France",
+    "numbers": [
+      { "label": "Emergency (EU)", "number": "112", "type": "general" },
+      { "label": "Police", "number": "17", "type": "police" },
+      { "label": "Ambulance (SAMU)", "number": "15", "type": "medical" },
+      { "label": "Fire (Pompiers)", "number": "18", "type": "fire" }
+    ]
+  },
+  "DE": {
+    "country": "Germany",
+    "numbers": [
+      { "label": "Fire / Ambulance / Emergency", "number": "112", "type": "general" },
+      { "label": "Police", "number": "110", "type": "police" }
+    ]
+  },
+  "IT": {
+    "country": "Italy",
+    "numbers": [
+      { "label": "Emergency (EU)", "number": "112", "type": "general" },
+      { "label": "Police (Carabinieri)", "number": "113", "type": "police" },
+      { "label": "Fire", "number": "115", "type": "fire" },
+      { "label": "Ambulance", "number": "118", "type": "medical" }
+    ]
+  },
+  "ES": {
+    "country": "Spain",
+    "numbers": [
+      { "label": "Emergency (EU)", "number": "112", "type": "general" },
+      { "label": "National Police", "number": "091", "type": "police" },
+      { "label": "Medical", "number": "061", "type": "medical" }
+    ]
+  },
+  "NL": {
+    "country": "Netherlands",
+    "numbers": [
+      { "label": "Emergency", "number": "112", "type": "general" },
+      { "label": "Non-emergency Police", "number": "09008844", "type": "police" }
+    ]
+  },
+  "CH": {
+    "country": "Switzerland",
+    "numbers": [
+      { "label": "Emergency (EU)", "number": "112", "type": "general" },
+      { "label": "Police", "number": "117", "type": "police" },
+      { "label": "Fire", "number": "118", "type": "fire" },
+      { "label": "Ambulance", "number": "144", "type": "medical" }
+    ]
+  },
+  "NO": {
+    "country": "Norway",
+    "numbers": [
+      { "label": "Police", "number": "112", "type": "police" },
+      { "label": "Fire", "number": "110", "type": "fire" },
+      { "label": "Ambulance", "number": "113", "type": "medical" }
+    ]
+  },
+  "SE": {
+    "country": "Sweden",
+    "numbers": [
+      { "label": "Emergency", "number": "112", "type": "general" },
+      { "label": "Medical advice", "number": "1177", "type": "medical" }
+    ]
+  },
+  "PL": {
+    "country": "Poland",
+    "numbers": [
+      { "label": "Emergency (EU)", "number": "112", "type": "general" },
+      { "label": "Police", "number": "997", "type": "police" },
+      { "label": "Fire", "number": "998", "type": "fire" },
+      { "label": "Ambulance", "number": "999", "type": "medical" }
+    ]
+  },
+  "RU": {
+    "country": "Russia",
+    "numbers": [
+      { "label": "Emergency", "number": "112", "type": "general" },
+      { "label": "Police", "number": "102", "type": "police" },
+      { "label": "Ambulance", "number": "103", "type": "medical" },
+      { "label": "Fire", "number": "101", "type": "fire" }
+    ]
+  },
+  "TR": {
+    "country": "Turkey",
+    "numbers": [
+      { "label": "Emergency (Police / Fire / Medical)", "number": "112", "type": "general" }
+    ]
+  },
+  "EU": {
+    "country": "European Union (general)",
+    "numbers": [
+      { "label": "Emergency", "number": "112", "type": "general" }
+    ]
+  },
+  "IN": {
+    "country": "India",
+    "numbers": [
+      { "label": "All-in-one Emergency", "number": "112", "type": "general" },
+      { "label": "Police", "number": "100", "type": "police" },
+      { "label": "Ambulance", "number": "102", "type": "medical" },
+      { "label": "Fire", "number": "101", "type": "fire" },
+      { "label": "Women's Helpline", "number": "1091", "type": "women" },
+      { "label": "Child Helpline", "number": "1098", "type": "child" },
+      { "label": "Disaster Management (NDMA)", "number": "1078", "type": "disaster" }
+    ]
+  },
+  "PK": {
+    "country": "Pakistan",
+    "numbers": [
+      { "label": "Rescue (Emergency)", "number": "1122", "type": "general" },
+      { "label": "Police", "number": "15", "type": "police" },
+      { "label": "Ambulance (Edhi)", "number": "115", "type": "medical" }
+    ]
+  },
+  "BD": {
+    "country": "Bangladesh",
+    "numbers": [
+      { "label": "National Emergency", "number": "999", "type": "general" }
+    ]
+  },
+  "NP": {
+    "country": "Nepal",
+    "numbers": [
+      { "label": "Police", "number": "100", "type": "police" },
+      { "label": "Fire", "number": "101", "type": "fire" },
+      { "label": "Ambulance", "number": "102", "type": "medical" },
+      { "label": "Child Helpline", "number": "1098", "type": "child" }
+    ]
+  },
+  "LK": {
+    "country": "Sri Lanka",
+    "numbers": [
+      { "label": "Police", "number": "119", "type": "police" },
+      { "label": "Fire / Rescue", "number": "110", "type": "fire" },
+      { "label": "Ambulance (Suwa Seriya)", "number": "1990", "type": "medical" }
+    ]
+  },
+  "CN": {
+    "country": "China",
+    "numbers": [
+      { "label": "Police", "number": "110", "type": "police" },
+      { "label": "Ambulance", "number": "120", "type": "medical" },
+      { "label": "Fire", "number": "119", "type": "fire" },
+      { "label": "Traffic Accident", "number": "122", "type": "traffic" }
+    ]
+  },
+  "JP": {
+    "country": "Japan",
+    "numbers": [
+      { "label": "Police", "number": "110", "type": "police" },
+      { "label": "Ambulance / Fire", "number": "119", "type": "medical" }
+    ]
+  },
+  "KR": {
+    "country": "South Korea",
+    "numbers": [
+      { "label": "Police", "number": "112", "type": "police" },
+      { "label": "Fire / Ambulance", "number": "119", "type": "medical" }
+    ]
+  },
+  "SG": {
+    "country": "Singapore",
+    "numbers": [
+      { "label": "Police", "number": "999", "type": "police" },
+      { "label": "Fire / Ambulance", "number": "995", "type": "medical" },
+      { "label": "Emergency (mobile)", "number": "112", "type": "general" }
+    ]
+  },
+  "MY": {
+    "country": "Malaysia",
+    "numbers": [
+      { "label": "Emergency", "number": "999", "type": "general" },
+      { "label": "Emergency (mobile)", "number": "112", "type": "general" }
+    ]
+  },
+  "ID": {
+    "country": "Indonesia",
+    "numbers": [
+      { "label": "Emergency", "number": "112", "type": "general" },
+      { "label": "Police", "number": "110", "type": "police" },
+      { "label": "Ambulance", "number": "119", "type": "medical" },
+      { "label": "Fire", "number": "113", "type": "fire" }
+    ]
+  },
+  "TH": {
+    "country": "Thailand",
+    "numbers": [
+      { "label": "Police", "number": "191", "type": "police" },
+      { "label": "Medical (EMS)", "number": "1669", "type": "medical" },
+      { "label": "Fire", "number": "199", "type": "fire" },
+      { "label": "Tourist Police", "number": "1155", "type": "tourist" }
+    ]
+  },
+  "PH": {
+    "country": "Philippines",
+    "numbers": [
+      { "label": "Emergency (Police / Fire / Medical)", "number": "911", "type": "general" }
+    ]
+  },
+  "AE": {
+    "country": "United Arab Emirates",
+    "numbers": [
+      { "label": "Police", "number": "999", "type": "police" },
+      { "label": "Ambulance", "number": "998", "type": "medical" },
+      { "label": "Fire (Civil Defence)", "number": "997", "type": "fire" },
+      { "label": "Emergency (mobile)", "number": "112", "type": "general" }
+    ]
+  },
+  "SA": {
+    "country": "Saudi Arabia",
+    "numbers": [
+      { "label": "Emergency (unified)", "number": "911", "type": "general" },
+      { "label": "Police", "number": "999", "type": "police" },
+      { "label": "Ambulance (Red Crescent)", "number": "997", "type": "medical" },
+      { "label": "Fire (Civil Defence)", "number": "998", "type": "fire" }
+    ]
+  },
+  "EG": {
+    "country": "Egypt",
+    "numbers": [
+      { "label": "Police", "number": "122", "type": "police" },
+      { "label": "Ambulance", "number": "123", "type": "medical" },
+      { "label": "Fire", "number": "180", "type": "fire" }
+    ]
+  },
+  "NG": {
+    "country": "Nigeria",
+    "numbers": [
+      { "label": "Emergency", "number": "112", "type": "general" },
+      { "label": "Fire / Police (alt)", "number": "199", "type": "fire" }
+    ]
+  },
+  "KE": {
+    "country": "Kenya",
+    "numbers": [
+      { "label": "Emergency", "number": "999", "type": "general" },
+      { "label": "Emergency (mobile)", "number": "112", "type": "general" }
+    ]
+  },
+  "ZA": {
+    "country": "South Africa",
+    "numbers": [
+      { "label": "Police", "number": "10111", "type": "police" },
+      { "label": "Ambulance", "number": "10177", "type": "medical" },
+      { "label": "Emergency (mobile)", "number": "112", "type": "general" }
+    ]
+  },
+  "AU": {
+    "country": "Australia",
+    "numbers": [
+      { "label": "Police / Fire / Medical", "number": "000", "type": "general" },
+      { "label": "Emergency (mobile)", "number": "112", "type": "general" },
+      { "label": "Non-urgent Police", "number": "131444", "type": "police" }
+    ]
+  },
+  "NZ": {
+    "country": "New Zealand",
+    "numbers": [
+      { "label": "Emergency (Police / Fire / Medical)", "number": "111", "type": "general" }
     ]
   }
 }

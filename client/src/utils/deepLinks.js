@@ -8,9 +8,18 @@ export function buildTelLink(number) {
   return `tel:${cleaned}`;
 }
 
-/** sms: link, pre-filled with a body message (used by SOS). */
+/**
+ * sms: link, pre-filled with a body message (used by SOS).
+ * Accepts a single number or an array — multiple recipients are comma-joined
+ * so all contacts can be texted from one deep link (one navigation), which is
+ * far more reliable than opening a separate popup per contact.
+ */
 export function buildSmsLink(number, message = '') {
-  const cleaned = String(number).replace(/[^\d+]/g, '');
+  const list = Array.isArray(number) ? number : [number];
+  const cleaned = list
+    .map((n) => String(n).replace(/[^\d+]/g, ''))
+    .filter(Boolean)
+    .join(',');
   const body = encodeURIComponent(message);
   // iOS uses `&`, most Android clients accept `?body=` too; `&` is the safer cross-platform choice
   return `sms:${cleaned}&body=${body}`;
@@ -34,4 +43,14 @@ export function buildSosMessage({ name, lat, lng, accuracy }) {
   const who = name ? `${name} needs help.` : 'I need help.';
   const acc = Number.isFinite(accuracy) ? ` (accuracy ~${Math.round(accuracy)}m)` : '';
   return `SafetyHub SOS: ${who} My live location: ${mapsLink}${acc}`;
+}
+
+/**
+ * Follow-up "I'm safe" message, sent to the same contacts after an SOS to
+ * close the loop. Includes the current location if available.
+ */
+export function buildSafeMessage({ lat, lng } = {}) {
+  const hasLoc = Number.isFinite(lat) && Number.isFinite(lng);
+  const location = hasLoc ? ` My location: ${buildMapsLink(lat, lng)}` : '';
+  return `SafetyHub: I'm safe now. Thank you for being there.${location}`;
 }

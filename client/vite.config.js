@@ -1,9 +1,16 @@
+import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    // keep in sync with the "@/*" path in jsconfig.json
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
   plugins: [
     react(),
     VitePWA({
@@ -17,7 +24,12 @@ export default defineConfig({
         'offline-fallback.html',
       ],
       workbox: {
-        navigateFallback: '/offline-fallback.html',
+        // precache the static manifest too (not in Workbox's default glob)
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
+        // Serve the precached app shell for offline navigations so the SPA
+        // (and its client-side routes) keep working with zero network. The
+        // static offline-fallback.html is still precached as a last resort.
+        navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/api\//],
         runtimeCaching: [
           {

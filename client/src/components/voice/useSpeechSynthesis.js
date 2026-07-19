@@ -14,10 +14,11 @@ export function useSpeechSynthesis() {
   useEffect(() => () => synth?.cancel(), []);
 
   const speak = useCallback(
-    (text) => {
+    (text, lang) => {
       if (!isSupported || !text) return;
       synth.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
+      if (lang) utterance.lang = lang; // match the app language so TTS picks the right voice
       utterance.rate = 0.95; // slightly slower than default — calmer, clearer in a crisis
       utterance.pitch = 1;
       utterance.onstart = () => setSpeaking(true);

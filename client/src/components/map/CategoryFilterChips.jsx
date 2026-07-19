@@ -1,21 +1,16 @@
-const CATEGORIES = [
-  { id: 'all', label: 'All' },
-  { id: 'hospital', label: 'Hospitals' },
-  { id: 'pharmacy', label: 'Pharmacies' },
-  { id: 'police', label: 'Police' },
-  { id: 'bank', label: 'Banks' },
-  { id: 'fuel', label: 'Fuel' },
-  { id: 'fire-station', label: 'Fire stations' },
-];
+import { useTranslation } from 'react-i18next';
+
+const CATEGORY_IDS = ['all', 'hospital', 'pharmacy', 'police', 'bank', 'fuel', 'fire-station'];
 
 export default function CategoryFilterChips({ active, onChange }) {
+  const { t } = useTranslation();
   return (
     <div
       className="flex gap-2 overflow-x-auto px-4 py-3 no-scrollbar"
       role="tablist"
-      aria-label="Filter places by category"
+      aria-label={t('map.filterAria')}
     >
-      {CATEGORIES.map(({ id, label }) => {
+      {CATEGORY_IDS.map((id) => {
         const isActive = active === id;
         return (
           <button
@@ -28,7 +23,7 @@ export default function CategoryFilterChips({ active, onChange }) {
               isActive ? 'bg-signal text-ink' : 'bg-surface text-muted'
             }`}
           >
-            {label}
+            {t(`categories.${id}`)}
           </button>
         );
       })}

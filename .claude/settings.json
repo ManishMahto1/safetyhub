@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(node -e ' *)",
+      "Bash(echo \"EXIT $?\")",
+      "Bash(powershell.exe -Command \"Stop-Process -Id 4976 -Force -ErrorAction SilentlyContinue\")",
+      "Bash(node dist/index.js)",
+      "Bash(curl -s \"http://localhost:7000/api/geocode?q=Indore\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"http://localhost:7000/api/geocode?q=a\")",
+      "Read(//tmp/**)",
+      "Bash(powershell.exe -Command 'Get-NetTCPConnection -LocalPort 7000 -State Listen -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }')",
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(npm install *)",
+      "Bash(curl -s \"http://localhost:7000/api/places?lat=28.6139&lng=77.2090&category=hospital\")",
+      "Bash(node -e 'let s=\"\";process.stdin.on\\(\"data\",d=>s+=d\\).on\\(\"end\",\\(\\)=>{const j=JSON.parse\\(s\\);console.log\\(\"source:\",j.source,\"| count:\",j.places.length\\);j.places.slice\\(0,3\\).forEach\\(p=>console.log\\(\" -\",p.name,\"\\(\"+p.category+\"\\)\"\\)\\);}\\)')"
+    ]
+  }
+}

@@ -3,7 +3,42 @@ import { Place, PlaceCategory } from '../types/place.types';
 import { cacheService } from './cache.service';
 import { lookupPhoto } from './photo.service';
 
-const OVERPASS_URL = 'https://overpass-api.de/api/interpreter';
+// Public Overpass instances are frequently overloaded (504) or rate-limited.
+// Try several mirrors in order so a single slow instance doesn't drop us to the
+// static fallback.
+const OVERPASS_ENDPOINTS = [
+  'https://overpass-api.de/api/interpreter',
+  'https://overpass.kumi.systems/api/interpreter',
+  'https://lz4.overpass-api.de/api/interpreter',
+];
+
+// Overpass rejects the raw-body POST with 406; it wants the query as a
+// form-encoded `data=` field and a descriptive User-Agent.
+const OVERPASS_HEADERS = {
+  'Content-Type': 'application/x-www-form-urlencoded',
+  Accept: 'application/json',
+  'User-Agent': 'SafetyHub/0.1 (https://github.com/ManishMahto1/safetyhub)',
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function postOverpass(query: string): Promise<any> {
+  const body = new URLSearchParams({ data: query }).toString();
+  let lastErr: unknown;
+  for (const url of OVERPASS_ENDPOINTS) {
+    try {
+      const { data } = await axios.post(url, body, {
+        headers: OVERPASS_HEADERS,
+        timeout: 20000,
+      });
+      return data;
+    } catch (err) {
+      lastErr = err;
+      // eslint-disable-next-line no-console
+      console.warn(`[overpass] ${url} failed: ${(err as Error).message} — trying next mirror`);
+    }
+  }
+  throw lastErr;
+}
 
 // Maps our category ids to OSM tag queries
 const CATEGORY_TAGS: Record<Exclude<PlaceCategory, never>, string[]> = {
@@ -56,10 +91,7 @@ export async function queryOverpass(
 
   return cacheService.wrap(cacheKey, 5 * 60 * 1000, async () => {
     const query = buildOverpassQuery(lat, lng, radius, categories);
-    const { data } = await axios.post(OVERPASS_URL, query, {
-      headers: { 'Content-Type': 'text/plain' },
-      timeout: 12000,
-    });
+    const data = await postOverpass(query);
 
     const elements: Array<{
       id: number;

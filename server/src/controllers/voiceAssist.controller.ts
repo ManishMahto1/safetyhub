@@ -4,14 +4,14 @@ import { VoiceLog } from '../models/VoiceLog.model';
 import { VoiceAssistRequestBody } from '../types/voiceAssist.types';
 
 export async function postVoiceAssist(req: Request, res: Response): Promise<void> {
-  const { transcript, location } = req.body as VoiceAssistRequestBody;
+  const { transcript, location, language } = req.body as VoiceAssistRequestBody;
 
   if (!transcript || !transcript.trim()) {
     res.status(400).json({ message: 'transcript is required' });
     return;
   }
 
-  const result = await getVoiceGuidance(transcript.trim(), location);
+  const result = await getVoiceGuidance(transcript.trim(), location, language);
 
   res.json({ reply: result.reply, suggestedCategory: result.suggestedCategory });
 

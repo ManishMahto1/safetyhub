@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import { useOnlineStatus } from '../../hooks/useOnlineStatus.js';
 
 export default function OfflineBanner() {
+  const { t } = useTranslation();
   const isOffline = useOnlineStatus();
 
   if (!isOffline) return null;
@@ -8,10 +10,10 @@ export default function OfflineBanner() {
   return (
     <div
       role="status"
-      className="sticky top-0 z-50 flex items-center justify-center gap-2 bg-signal/15 border-b border-signal/30 text-signal text-xs font-medium py-2 px-3"
+      className="flex items-center justify-center gap-2 bg-signal/15 border-b border-signal/30 text-signal text-xs font-medium py-2 px-3"
     >
       <OfflineIcon className="w-4 h-4 shrink-0" />
-      <span>Offline — emergency numbers and saved contacts still work</span>
+      <span>{t('offline.banner')}</span>
     </div>
   );
 }

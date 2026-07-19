@@ -12,6 +12,24 @@ function RecenterOnCoords({ coords }) {
   return null;
 }
 
+/**
+ * Leaflet renders gray/blank tiles if it initialises before its flex container
+ * has a size. Force a recalculation once mounted (and on window resize).
+ */
+function InvalidateSizeOnMount() {
+  const map = useMap();
+  useEffect(() => {
+    const fix = () => map.invalidateSize();
+    const id = setTimeout(fix, 120);
+    window.addEventListener('resize', fix);
+    return () => {
+      clearTimeout(id);
+      window.removeEventListener('resize', fix);
+    };
+  }, [map]);
+  return null;
+}
+
 export default function MapContainer({ coords, places, onSelectPlace }) {
   const center = coords ? [coords.lat, coords.lng] : [20, 0];
   const zoom = coords ? 15 : 2;
@@ -29,6 +47,7 @@ export default function MapContainer({ coords, places, onSelectPlace }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
+      <InvalidateSizeOnMount />
       {coords && <RecenterOnCoords coords={coords} />}
 
       {coords && (

@@ -11,7 +11,7 @@ function required(name: string, fallback?: string): string {
 }
 
 export const env = {
-  port: Number(process.env.PORT) || 5000,
+  port: Number(process.env.PORT) || 7000,
   mongoUri: required('MONGO_URI', 'mongodb://localhost:27017/safetyhub'),
   openaiApiKey: process.env.OPENAI_API_KEY || '',
   clientOrigin: process.env.CLIENT_ORIGIN || 'http://localhost:5173',

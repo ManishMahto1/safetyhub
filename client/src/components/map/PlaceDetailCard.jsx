@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import PlacePhoto from './PlacePhoto.jsx';
 import { formatDistance } from '../../utils/distance.js';
 import { buildTelLink, buildMapsLink } from '../../utils/deepLinks.js';
 
 export default function PlaceDetailCard({ place, distanceMeters, onClose }) {
+  const { t } = useTranslation();
   if (!place) return null;
 
   return (
@@ -20,7 +22,7 @@ export default function PlaceDetailCard({ place, distanceMeters, onClose }) {
             <button
               type="button"
               onClick={onClose}
-              aria-label="Close details"
+              aria-label={t('map.closeDetails')}
               className="tap-target shrink-0 text-muted"
             >
               ✕
@@ -28,7 +30,9 @@ export default function PlaceDetailCard({ place, distanceMeters, onClose }) {
           </div>
           {place.address && <p className="text-xs text-muted mt-0.5 truncate">{place.address}</p>}
           {Number.isFinite(distanceMeters) && (
-            <p className="text-xs text-calm mt-0.5">{formatDistance(distanceMeters)} away</p>
+            <p className="text-xs text-calm mt-0.5">
+              {t('map.away', { distance: formatDistance(distanceMeters) })}
+            </p>
           )}
           <div className="flex gap-2 mt-3">
             {place.phone && (
@@ -36,7 +40,7 @@ export default function PlaceDetailCard({ place, distanceMeters, onClose }) {
                 href={buildTelLink(place.phone)}
                 className="tap-target flex items-center justify-center flex-1 rounded-full bg-signal text-ink text-sm font-semibold px-3 py-2"
               >
-                Call
+                {t('map.call')}
               </a>
             )}
             <a
@@ -45,7 +49,7 @@ export default function PlaceDetailCard({ place, distanceMeters, onClose }) {
               rel="noreferrer"
               className="tap-target flex items-center justify-center flex-1 rounded-full bg-surface2 text-sm font-semibold px-3 py-2"
             >
-              Directions
+              {t('map.directions')}
             </a>
           </div>
         </div>

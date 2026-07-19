@@ -1,20 +1,22 @@
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const TABS = [
-  { to: '/', label: 'Home', icon: HomeIcon },
-  { to: '/map', label: 'Map', icon: MapIcon },
-  { to: '/contacts', label: 'Contacts', icon: ContactsIcon },
-  { to: '/settings', label: 'Settings', icon: SettingsIcon },
+  { to: '/', labelKey: 'nav.home', icon: HomeIcon },
+  { to: '/map', labelKey: 'nav.map', icon: MapIcon },
+  { to: '/contacts', labelKey: 'nav.contacts', icon: ContactsIcon },
+  { to: '/settings', labelKey: 'nav.settings', icon: SettingsIcon },
 ];
 
 export default function BottomNav() {
+  const { t } = useTranslation();
   return (
     <nav
       className="fixed bottom-0 inset-x-0 z-40 bg-surface border-t border-white/5 pb-[env(safe-area-inset-bottom)]"
       aria-label="Primary"
     >
       <ul className="flex justify-around">
-        {TABS.map(({ to, label, icon: Icon }) => (
+        {TABS.map(({ to, labelKey, icon: Icon }) => (
           <li key={to} className="flex-1">
             <NavLink
               to={to}
@@ -26,7 +28,7 @@ export default function BottomNav() {
               }
             >
               <Icon className="w-6 h-6" />
-              {label}
+              {t(labelKey)}
             </NavLink>
           </li>
         ))}

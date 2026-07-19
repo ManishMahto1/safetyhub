@@ -1,0 +1,164 @@
+{
+  "app": {
+    "name": "SafetyHub",
+    "tagline": "Encuentra lo que necesitas, ahora mismo, aquí mismo."
+  },
+  "nav": {
+    "home": "Inicio",
+    "map": "Mapa",
+    "contacts": "Contactos",
+    "settings": "Ajustes"
+  },
+  "offline": {
+    "banner": "Sin conexión — los números de emergencia y los contactos guardados siguen funcionando"
+  },
+  "categories": {
+    "all": "Todos",
+    "hospital": "Hospitales",
+    "pharmacy": "Farmacias",
+    "police": "Policía",
+    "bank": "Bancos",
+    "fuel": "Combustible",
+    "fire-station": "Bomberos"
+  },
+  "categoryName": {
+    "hospital": "Hospital",
+    "pharmacy": "Farmacia",
+    "police": "Policía",
+    "bank": "Banco",
+    "fuel": "Gasolinera",
+    "fire-station": "Estación de bomberos"
+  },
+  "home": {
+    "sosHeading": "Enviar un SOS",
+    "emergencyNumbers": "Números de emergencia",
+    "voiceAssistant": "Asistente de voz"
+  },
+  "sos": {
+    "button": "SOS",
+    "aria": "Enviar SOS a tus contactos de emergencia",
+    "noContactsHint": "Agrega un contacto de emergencia en Contactos para que el SOS tenga a dónde enviar tu ubicación.",
+    "sendingA11y": "Enviando SOS",
+    "countdown": "Enviando tu ubicación a {{count}} contacto(s) en",
+    "cancel": "Cancelar",
+    "noContactsTitle": "No hay contactos guardados",
+    "noLocationTitle": "No se pudo obtener tu ubicación",
+    "readyTitle": "Listo para enviar",
+    "noContactsBody": "Primero agrega un contacto de emergencia para que el SOS tenga a dónde enviar tu ubicación.",
+    "noLocationBody": "Revisa los permisos de ubicación e inténtalo de nuevo.",
+    "readyBody": "Toca para enviar tu ubicación a cada contacto. Intentamos abrir el primero automáticamente.",
+    "textContacts": "Enviar SMS a {{names}}",
+    "whatsappContact": "WhatsApp a {{name}}",
+    "done": "Listo"
+  },
+  "contacts": {
+    "title": "Contactos de emergencia",
+    "subtitle": "El SOS enviará tu ubicación en vivo a estas personas. {{count}}/{{max}} guardados.",
+    "edit": "Editar",
+    "remove": "Eliminar",
+    "empty": "Aún no hay contactos. Agrega a alguien que deba saber si estás en problemas.",
+    "addTitle": "Agregar un contacto",
+    "editTitle": "Editar contacto",
+    "name": "Nombre",
+    "namePlaceholder": "p. ej. Mamá",
+    "phone": "Número de teléfono",
+    "phonePlaceholder": "+34 612 345 678",
+    "sendVia": "Enviar SOS por",
+    "channelSms": "SMS",
+    "channelWhatsapp": "WhatsApp",
+    "errRequired": "El nombre y el número de teléfono son obligatorios.",
+    "errPhone": "Introduce un número de teléfono válido.",
+    "errLimit": "Puedes guardar hasta {{max}} contactos.",
+    "errDuplicate": "Este número de teléfono ya está guardado.",
+    "save": "Guardar contacto",
+    "saveChanges": "Guardar cambios",
+    "cancel": "Cancelar",
+    "limitReached": "Has alcanzado el límite de {{max}} contactos. Elimina uno para agregar otro.",
+    "ariaEdit": "Editar {{name}}",
+    "ariaRemove": "Eliminar {{name}}"
+  },
+  "map": {
+    "searchPlaceholder": "Busca una ciudad o lugar…",
+    "searchAria": "Buscar una ciudad o lugar",
+    "viewMap": "Mapa",
+    "viewList": "Lista",
+    "viewToggleAria": "Vista de mapa o lista",
+    "filterAria": "Filtrar lugares por categoría",
+    "locationOff": "La ubicación está desactivada. Busca una ciudad arriba para ver ayuda cercana.",
+    "locating": "Buscando tu ubicación…",
+    "loading": "Buscando lugares cercanos…",
+    "offlineCached": "Sin conexión — mostrando tus últimos lugares cargados",
+    "sampleData": "Mostrando datos de ejemplo — resultados en vivo no disponibles",
+    "loadError": "No se pudieron cargar los lugares — aún no hay datos en caché",
+    "emptyList": "Todavía no se encontraron lugares aquí. Prueba otra categoría o busca en otra zona.",
+    "call": "Llamar",
+    "directions": "Cómo llegar",
+    "away": "a {{distance}}",
+    "closeDetails": "Cerrar detalles",
+    "showOnMapAria": "Mostrar {{name}} en el mapa",
+    "callAria": "Llamar a {{name}}",
+    "directionsAria": "Cómo llegar a {{name}}"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "language": "Idioma",
+    "languageHelp": "Elige el idioma de la app y del asistente de voz.",
+    "languageAuto": "Detección automática",
+    "region": "Región",
+    "regionHelp": "SafetyHub detecta tu país automáticamente según tu ubicación. Cámbialo aquí si la detección se equivoca.",
+    "regionAuto": "Detección automática",
+    "connection": "Conexión",
+    "status": "Estado:",
+    "online": "En línea",
+    "offline": "Sin conexión",
+    "connectionHelp": "Los números de emergencia y los contactos guardados siempre funcionan sin conexión. El mapa y el asistente de voz necesitan conexión.",
+    "about": "Acerca de",
+    "aboutText": "SafetyHub es de código abierto bajo la licencia MIT. Creado para el OpenAI Codex Hackathon, julio de 2026."
+  },
+  "voice": {
+    "statusListening": "Escuchando…",
+    "statusThinking": "Pensando…",
+    "statusSpeaking": "Dando indicaciones…",
+    "statusSpeakingDone": "Esto es lo que debes hacer",
+    "statusIdle": "Toca el micrófono y describe qué está pasando",
+    "statusError": "No se pudieron obtener indicaciones",
+    "disclaimer": "Solo orientación — el SOS nunca se activa automáticamente.",
+    "unsupported": "La entrada de voz no es compatible con este navegador. Prueba Chrome o Safari, o usa el mapa y los números de emergencia directamente.",
+    "micStart": "Habla con el asistente de voz",
+    "micStop": "Dejar de escuchar",
+    "errDenied": "El acceso al micrófono está bloqueado. Permítelo en la configuración del sitio de tu navegador e inténtalo de nuevo.",
+    "errNoMic": "No se encontró ningún micrófono en este dispositivo.",
+    "errNoSpeech": "No te entendí. Toca el micrófono e inténtalo de nuevo.",
+    "errNetwork": "El reconocimiento de voz necesita conexión en este momento.",
+    "youSaid": "Dijiste:",
+    "showOnMap": "Mostrar {{category}} en el mapa"
+  },
+  "imSafe": {
+    "button": "Ya estoy a salvo",
+    "sheetTitle": "Avísales de que estás a salvo",
+    "sheetBody": "Envía un mensaje de seguimiento a tus contactos para que sepan que estás bien."
+  },
+  "qr": {
+    "button": "Compartir mi ubicación (QR)",
+    "title": "Escanea para ver mi ubicación",
+    "generating": "Generando código QR…",
+    "noLocation": "Ubicación no disponible. Activa la ubicación e inténtalo de nuevo.",
+    "share": "Compartir enlace",
+    "shareText": "Esta es mi ubicación en vivo",
+    "close": "Cerrar"
+  },
+  "disaster": {
+    "settingsTitle": "Modo desastre",
+    "settingsHelp": "Demo: muestra refugios y centros de ayuda cercanos como si se hubiera declarado un desastre en tu región. Funciona sin conexión.",
+    "banner": "Modo desastre — se muestran refugios y centros de ayuda cercanos",
+    "sheltersTitle": "Refugios y centros de ayuda",
+    "sheltersSubtitle": "Lugares seguros seleccionados para refugio, ayuda médica, comida y agua.",
+    "empty": "No hay refugios listados para esta zona."
+  },
+  "disasterType": {
+    "shelter": "Refugio",
+    "relief": "Centro de ayuda",
+    "medical": "Campamento médico",
+    "food": "Comida y agua"
+  }
+}

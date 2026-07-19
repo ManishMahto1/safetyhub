@@ -1,7 +1,14 @@
 import { create } from 'zustand';
 
 const CONTACTS_KEY = 'safetyhub:contacts';
+const SOS_ACTIVE_KEY = 'safetyhub:sosActive';
+const DISASTER_KEY = 'safetyhub:disasterMode';
 const MAX_CONTACTS = 5;
+
+/** Compare phone numbers by digits only, so "+1 555" and "1555" are the same. */
+function normalizePhone(phone) {
+  return String(phone || '').replace(/\D/g, '');
+}
 
 function loadContacts() {
   try {
@@ -20,6 +27,40 @@ function persistContacts(contacts) {
   }
 }
 
+function loadSosActive() {
+  try {
+    return localStorage.getItem(SOS_ACTIVE_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function persistSosActive(active) {
+  try {
+    if (active) localStorage.setItem(SOS_ACTIVE_KEY, '1');
+    else localStorage.removeItem(SOS_ACTIVE_KEY);
+  } catch {
+    // non-fatal
+  }
+}
+
+function loadDisasterMode() {
+  try {
+    return localStorage.getItem(DISASTER_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function persistDisasterMode(active) {
+  try {
+    if (active) localStorage.setItem(DISASTER_KEY, '1');
+    else localStorage.removeItem(DISASTER_KEY);
+  } catch {
+    // non-fatal
+  }
+}
+
 export const useAppStore = create((set, get) => ({
   // region: ISO country code used to look up emergency numbers
   region: 'default',
@@ -33,11 +74,30 @@ export const useAppStore = create((set, get) => ({
   coords: null,
   setCoords: (coords) => set({ coords }),
 
+  // whether an SOS was recently sent — drives the "I'm Safe" follow-up prompt.
+  // Persisted so it survives a reload/offline after an alert.
+  sosActive: loadSosActive(),
+  setSosActive: (active) => {
+    persistSosActive(active);
+    set({ sosActive: active });
+  },
+
+  // demo "disaster mode": surfaces a curated shelter/relief dataset app-wide.
+  disasterMode: loadDisasterMode(),
+  setDisasterMode: (active) => {
+    persistDisasterMode(active);
+    set({ disasterMode: active });
+  },
+
   // emergency contacts, capped at MAX_CONTACTS, persisted to localStorage
   contacts: loadContacts(),
   addContact: (contact) => {
     const { contacts } = get();
     if (contacts.length >= MAX_CONTACTS) return { ok: false, reason: 'limit' };
+    const phone = normalizePhone(contact.phone);
+    if (contacts.some((c) => normalizePhone(c.phone) === phone)) {
+      return { ok: false, reason: 'duplicate' };
+    }
     const next = [...contacts, { id: crypto.randomUUID(), ...contact }];
     persistContacts(next);
     set({ contacts: next });

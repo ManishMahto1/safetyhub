@@ -1,0 +1,164 @@
+{
+  "app": {
+    "name": "SafetyHub",
+    "tagline": "Find what you need, right now, right here."
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "contacts": "Contacts",
+    "settings": "Settings"
+  },
+  "offline": {
+    "banner": "Offline — emergency numbers and saved contacts still work"
+  },
+  "categories": {
+    "all": "All",
+    "hospital": "Hospitals",
+    "pharmacy": "Pharmacies",
+    "police": "Police",
+    "bank": "Banks",
+    "fuel": "Fuel",
+    "fire-station": "Fire stations"
+  },
+  "categoryName": {
+    "hospital": "Hospital",
+    "pharmacy": "Pharmacy",
+    "police": "Police",
+    "bank": "Bank",
+    "fuel": "Fuel station",
+    "fire-station": "Fire station"
+  },
+  "home": {
+    "sosHeading": "Send an SOS",
+    "emergencyNumbers": "Emergency numbers",
+    "voiceAssistant": "Voice assistant"
+  },
+  "sos": {
+    "button": "SOS",
+    "aria": "Send SOS to your emergency contacts",
+    "noContactsHint": "Add an emergency contact in Contacts so SOS has somewhere to send your location.",
+    "sendingA11y": "Sending SOS",
+    "countdown": "Sending your location to {{count}} contact(s) in",
+    "cancel": "Cancel",
+    "noContactsTitle": "No contacts saved",
+    "noLocationTitle": "Couldn't get your location",
+    "readyTitle": "Ready to send",
+    "noContactsBody": "Add an emergency contact first so SOS has somewhere to send your location.",
+    "noLocationBody": "Check location permissions and try again.",
+    "readyBody": "Tap to send your location to each contact. We tried to open the first automatically.",
+    "textContacts": "Text {{names}}",
+    "whatsappContact": "WhatsApp {{name}}",
+    "done": "Done"
+  },
+  "contacts": {
+    "title": "Emergency contacts",
+    "subtitle": "These are who SOS alerts your live location to. {{count}}/{{max}} saved.",
+    "edit": "Edit",
+    "remove": "Remove",
+    "empty": "No contacts yet. Add someone who should know if you're in trouble.",
+    "addTitle": "Add a contact",
+    "editTitle": "Edit contact",
+    "name": "Name",
+    "namePlaceholder": "e.g. Mom",
+    "phone": "Phone number",
+    "phonePlaceholder": "+1 555 123 4567",
+    "sendVia": "Send SOS via",
+    "channelSms": "SMS",
+    "channelWhatsapp": "WhatsApp",
+    "errRequired": "Name and phone number are required.",
+    "errPhone": "Enter a valid phone number.",
+    "errLimit": "You can save up to {{max}} contacts.",
+    "errDuplicate": "This phone number is already saved.",
+    "save": "Save contact",
+    "saveChanges": "Save changes",
+    "cancel": "Cancel",
+    "limitReached": "You've reached the {{max}}-contact limit. Remove one to add another.",
+    "ariaEdit": "Edit {{name}}",
+    "ariaRemove": "Remove {{name}}"
+  },
+  "map": {
+    "searchPlaceholder": "Search a city or place…",
+    "searchAria": "Search for a city or place",
+    "viewMap": "Map",
+    "viewList": "List",
+    "viewToggleAria": "Map or list view",
+    "filterAria": "Filter places by category",
+    "locationOff": "Location is off. Search a city above to see nearby help.",
+    "locating": "Finding your location…",
+    "loading": "Finding nearby places…",
+    "offlineCached": "Offline — showing your last-loaded places",
+    "sampleData": "Showing sample data — live results unavailable",
+    "loadError": "Couldn't load places — no cached data yet",
+    "emptyList": "No places found here yet. Try another category or search a different area.",
+    "call": "Call",
+    "directions": "Directions",
+    "away": "{{distance}} away",
+    "closeDetails": "Close details",
+    "showOnMapAria": "Show {{name}} on the map",
+    "callAria": "Call {{name}}",
+    "directionsAria": "Directions to {{name}}"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "languageHelp": "Choose the language for the app and the voice assistant.",
+    "languageAuto": "Auto-detect",
+    "region": "Region",
+    "regionHelp": "SafetyHub detects your country automatically from your location. Override it here if detection gets it wrong.",
+    "regionAuto": "Auto-detect",
+    "connection": "Connection",
+    "status": "Status:",
+    "online": "Online",
+    "offline": "Offline",
+    "connectionHelp": "Emergency numbers and saved contacts always work offline. The map and voice assistant need a connection.",
+    "about": "About",
+    "aboutText": "SafetyHub is open source under the MIT license. Built for the OpenAI Codex Hackathon, July 2026."
+  },
+  "voice": {
+    "statusListening": "Listening…",
+    "statusThinking": "Thinking…",
+    "statusSpeaking": "Speaking guidance…",
+    "statusSpeakingDone": "Here's what to do",
+    "statusIdle": "Tap the mic and describe what's happening",
+    "statusError": "Couldn't get guidance",
+    "disclaimer": "Guidance only — SOS is never triggered automatically.",
+    "unsupported": "Voice input isn't supported in this browser. Try Chrome or Safari, or use the map and emergency numbers directly.",
+    "micStart": "Speak to the voice assistant",
+    "micStop": "Stop listening",
+    "errDenied": "Microphone access is blocked. Allow it in your browser's site settings, then try again.",
+    "errNoMic": "No microphone was found on this device.",
+    "errNoSpeech": "I didn't catch that. Tap the mic and try again.",
+    "errNetwork": "Speech recognition needs a connection right now.",
+    "youSaid": "You said:",
+    "showOnMap": "Show {{category}} on map"
+  },
+  "imSafe": {
+    "button": "I'm safe now",
+    "sheetTitle": "Let them know you're safe",
+    "sheetBody": "Send a follow-up message to your contacts so they know you're okay."
+  },
+  "qr": {
+    "button": "Share my location (QR)",
+    "title": "Scan to see my location",
+    "generating": "Generating QR code…",
+    "noLocation": "Location unavailable. Enable location and try again.",
+    "share": "Share link",
+    "shareText": "Here's my live location",
+    "close": "Close"
+  },
+  "disaster": {
+    "settingsTitle": "Disaster mode",
+    "settingsHelp": "Demo: show nearby shelters and relief centers as if a disaster were declared in your region. Works offline.",
+    "banner": "Disaster mode — nearby shelters and relief centers are shown",
+    "sheltersTitle": "Shelters & relief centers",
+    "sheltersSubtitle": "Curated safe places for shelter, medical help, food, and water.",
+    "empty": "No shelters listed for this area."
+  },
+  "disasterType": {
+    "shelter": "Shelter",
+    "relief": "Relief center",
+    "medical": "Medical camp",
+    "food": "Food & water"
+  }
+}

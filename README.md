@@ -91,16 +91,19 @@ cp server/.env.example server/.env
 `server/.env` needs at minimum:
 
 ```
-PORT=5000
+PORT=7000
 MONGO_URI=your_mongodb_connection_string
 OPENAI_API_KEY=your_openai_api_key
+CLIENT_ORIGIN=http://localhost:5173
 ```
 
 `client/.env` needs:
 
 ```
-VITE_API_BASE_URL=http://localhost:5000
+VITE_API_BASE_URL=http://localhost:7000
 ```
+
+> MongoDB is optional — the API runs fine without it (it's only used for best-effort voice-interaction logging). If `MONGO_URI` is unreachable, the server logs a warning and keeps serving.
 
 ### 3. Run locally
 
@@ -120,6 +123,47 @@ The app will be available at `http://localhost:5173`. Grant location and microph
 cd client && npm run build
 cd server && npm run build && npm start
 ```
+
+### 5. Lint & format
+
+Both packages share a Prettier config (root `.prettierrc.json`) and each has its own ESLint setup.
+
+```bash
+# in either client/ or server/
+npm run lint          # eslint
+npm run format        # prettier --write
+npm run format:check  # prettier --check (CI-friendly)
+```
+
+---
+
+## Deployment
+
+The two packages deploy independently: the client as a static PWA, the server as a Node web service.
+
+### Client → Vercel
+
+`client/vercel.json` is preconfigured (SPA rewrites so refreshing `/map` doesn't 404, plus a no-cache header on the service worker). Import the repo into Vercel with **Root Directory = `client`**, then set one build-time env var:
+
+```
+VITE_API_BASE_URL=https://<your-server-host>   # the deployed API base URL
+```
+
+> This is read at **build time** — if you change it, redeploy. Without it, the client falls back to `http://localhost:7000` (fine locally, wrong in production).
+
+### Server → Render
+
+`render.yaml` (repo root) is a Render Blueprint for the API. Create a new Blueprint pointing at the repo and set the secret env vars in the dashboard:
+
+```
+CLIENT_ORIGIN=https://<your-client-host>   # required for CORS — the deployed client URL
+OPENAI_API_KEY=...                          # optional (keyword fallback if unset)
+MONGO_URI=...                               # optional (voice logging only; app runs without it)
+```
+
+Render injects `PORT` automatically. The health check path is `/health`.
+
+> **CORS:** the server allows exactly one origin (`CLIENT_ORIGIN`). Point it at your deployed client, or requests from the browser will be blocked.
 
 ---
 

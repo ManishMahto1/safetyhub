@@ -6,14 +6,16 @@ const SpeechRecognitionImpl =
 /**
  * Thin wrapper around the browser's SpeechRecognition API.
  * Returns interim + final transcript text and listening state.
+ * @param {{ lang?: string }} options BCP-47 language tag for recognition.
  */
-export function useSpeechRecognition() {
+export function useSpeechRecognition({ lang } = {}) {
   const [transcript, setTranscript] = useState('');
   const [listening, setListening] = useState(false);
   const [error, setError] = useState(null);
   const recognitionRef = useRef(null);
 
   const isSupported = Boolean(SpeechRecognitionImpl);
+  const recognitionLang = lang || navigator.language || 'en-US';
 
   useEffect(() => {
     if (!isSupported) return undefined;
@@ -21,7 +23,7 @@ export function useSpeechRecognition() {
     const recognition = new SpeechRecognitionImpl();
     recognition.continuous = false;
     recognition.interimResults = true;
-    recognition.lang = navigator.language || 'en-US';
+    recognition.lang = recognitionLang;
 
     recognition.onresult = (event) => {
       let text = '';
@@ -41,7 +43,7 @@ export function useSpeechRecognition() {
     recognitionRef.current = recognition;
 
     return () => recognition.stop();
-  }, [isSupported]);
+  }, [isSupported, recognitionLang]);
 
   const start = useCallback(() => {
     if (!recognitionRef.current) return;

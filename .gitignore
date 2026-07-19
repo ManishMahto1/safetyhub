@@ -5,6 +5,7 @@ server/node_modules/
 
 # builds
 client/dist/
+client/dev-dist/
 server/dist/
 
 # env
@@ -28,3 +29,4 @@ Thumbs.db
 # misc
 coverage/
 .cache/
+.env
